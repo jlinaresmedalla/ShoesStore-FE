@@ -1,17 +1,35 @@
 import { createTheme } from '@mui/material';
+import { grey, indigo } from '@mui/material/colors';
 
 export const theme = createTheme({
+  palette: {
+    primary: {
+      main: indigo['A400'],
+    },
+    secondary: {
+      main: grey[900],
+    },
+  },
   typography: {
     button: {
       textTransform: 'none',
     },
   },
   components: {
-    // Name of the component
-    MuiButtonBase: {
+    MuiButton: {
       defaultProps: {
-        // The props to change the default for.
-        disableRipple: true, // No more ripple, on the whole application 💣!
+        variant: 'contained',
+        disableElevation: true,
+      },
+    },
+    MuiPaper: {
+      defaultProps: {
+        elevation: 3,
+      },
+    },
+    MuiAppBar: {
+      defaultProps: {
+        elevation: 3,
       },
     },
   },
