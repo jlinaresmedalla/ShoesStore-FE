@@ -5,11 +5,11 @@ import { AppBar, Button, IconButton, Toolbar, Typography } from '@mui/material';
 const Navbar = ({ handleMenuClick }) => {
   return (
     <AppBar position="sticky" color="inherit">
-      <Toolbar>
-        <IconButton size="small" edge="start" color="inherit" onClick={handleMenuClick}>
-          <MenuIcon />
+      <Toolbar className="px-2">
+        <IconButton color="inherit" onClick={handleMenuClick}>
+          <MenuIcon color="secondary" />
         </IconButton>
-        <Typography variant="h6" component="div" className="flex-grow">
+        <Typography variant="h6" className="flex-grow">
           News
         </Typography>
         <Button color="inherit">Login</Button>

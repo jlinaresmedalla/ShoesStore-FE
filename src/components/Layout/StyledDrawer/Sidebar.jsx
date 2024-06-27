@@ -35,10 +35,10 @@ const Sidebar = ({ open, handleMenuClick }) => {
         {TOP_SIDEBAR_ITEMS.map((item) => (
           <ListItem key={item?.label} disablePadding>
             <ListItemButton onClick={() => navigate(item?.to)}>
-              <ListItemIcon className="text-black">{item?.icon}</ListItemIcon>
+              <ListItemIcon>{item?.icon}</ListItemIcon>
               <ListItemText
                 primary={item.label}
-                primaryTypographyProps={{ className: 'text-black font-medium' }}
+                primaryTypographyProps={{ sx: { fontWeight: '500' } }}
               />
             </ListItemButton>
           </ListItem>
@@ -48,11 +48,11 @@ const Sidebar = ({ open, handleMenuClick }) => {
       <ListItem disablePadding>
         <ListItemButton>
           <ListItemIcon>
-            <LogoutIcon className="text-black" />
+            <LogoutIcon color="secondary" />
           </ListItemIcon>
           <ListItemText
-            primary={'Logout'}
-            primaryTypographyProps={{ className: 'text-black font-medium' }}
+            primary={'Log Out'}
+            primaryTypographyProps={{ sx: { fontWeight: '500' } }}
           />
         </ListItemButton>
       </ListItem>
