@@ -1,11 +1,9 @@
-import { StyledButton } from '@/components/ui';
+import DashboardView from './DashboardView';
 
 const Dashboard = () => {
   return (
     <div className="flex flex-col w-full">
-      <div className="flex flex-col w-1/2 h-full">
-        dashboard <StyledButton>Click me</StyledButton>
-      </div>
+      <DashboardView title="Dashboard" />
     </div>
   );
 };

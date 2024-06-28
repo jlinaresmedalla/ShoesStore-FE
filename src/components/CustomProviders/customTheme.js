@@ -1,10 +1,10 @@
 import { createTheme } from '@mui/material';
-import { grey, indigo } from '@mui/material/colors';
+import { green, grey } from '@mui/material/colors';
 
 export const theme = createTheme({
   palette: {
     primary: {
-      main: indigo['A400'],
+      main: green[600],
     },
     secondary: {
       main: grey[900],
@@ -30,6 +30,11 @@ export const theme = createTheme({
     MuiAppBar: {
       defaultProps: {
         elevation: 3,
+      },
+    },
+    MuiTextField: {
+      defaultProps: {
+        size: 'small',
       },
     },
   },
