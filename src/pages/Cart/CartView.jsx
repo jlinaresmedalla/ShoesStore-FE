@@ -1,11 +1,11 @@
 import { PageFooter, PageHeader } from '@/components/ui';
-import CartSection from './CartSection';
+import CartOrderSection from './CartOrderSection';
 
 const CartView = () => {
   return (
     <div className="flex flex-col w-full gap-4">
       <PageHeader title={'Carrito'} />
-      <CartSection />
+      <CartOrderSection />
       <PageFooter />
     </div>
   );

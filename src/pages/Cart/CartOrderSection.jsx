@@ -1,7 +1,7 @@
 import { StyledButton, StyledPaper, StyledTextField } from '@/components/ui';
 import { Divider, Typography } from '@mui/material';
 
-const CartSection = () => {
+const CartOrderSection = () => {
   return (
     <StyledPaper component="main" className="flex flex-col p-4 gap-4">
       <Typography variant="h6">Detalles de Orden</Typography>
@@ -24,7 +24,7 @@ const CartSection = () => {
           </StyledPaper>
           <StyledPaper variant="outlined" className="flex flex-col flex-[1_1_500px] p-4 gap-2">
             <Typography variant="subtitle1">Productos</Typography>
-            <div className="flex flex-col divide-y divide-slate-700">
+            <div className="flex flex-col">
               <div className="flex gap-3 items-center">
                 <div>image</div>
                 <div className="flex-grow">
@@ -65,4 +65,4 @@ const CartSection = () => {
   );
 };
 
-export default CartSection;
+export default CartOrderSection;

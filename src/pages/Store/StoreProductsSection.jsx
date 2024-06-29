@@ -7,7 +7,7 @@ import { productsList } from './utils/store.utils';
 const StoreProductsSection = () => {
   return (
     <StyledPaper component="main" className={'flex flex-col p-4 gap-4'}>
-      <div className="flex justify-between items-center">
+      <div className="flex justify-between">
         <Typography variant="h6">Productos</Typography>
         <StyledTextField
           placeholder={'Search Product'}
