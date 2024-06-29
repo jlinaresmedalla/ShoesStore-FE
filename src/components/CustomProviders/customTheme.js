@@ -11,6 +11,9 @@ export const theme = createTheme({
     },
   },
   typography: {
+    subtitle1: {
+      fontWeight: 'bold',
+    },
     button: {
       textTransform: 'none',
     },
@@ -35,6 +38,11 @@ export const theme = createTheme({
     MuiTextField: {
       defaultProps: {
         size: 'small',
+      },
+    },
+    MuiInputBase: {
+      defaultProps: {
+        sx: { backgroundColor: grey['A100'] },
       },
     },
   },

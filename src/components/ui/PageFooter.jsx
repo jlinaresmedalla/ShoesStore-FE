@@ -1,7 +1,5 @@
 import { Divider } from '@mui/material';
 
-const PageFooter = () => {
+export const PageFooter = () => {
   return <Divider />;
 };
-
-export default PageFooter;
