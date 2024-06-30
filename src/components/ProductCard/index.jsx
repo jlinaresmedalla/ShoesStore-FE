@@ -2,7 +2,9 @@ import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import { Typography } from '@mui/material';
 import { StyledButton, StyledPaper } from '../ui';
 
-const ProductCard = ({ price, name, description, oldPrice, image }) => {
+const ProductCard = ({ price, name, description, oldPrice, image, handleClick }) => {
+  const product = { price, name, description, oldPrice, image };
+
   return (
     <StyledPaper className="flex w-64 flex-col" variant="outlined">
       <div className="h-52 overflow-hidden">
@@ -14,12 +16,12 @@ const ProductCard = ({ price, name, description, oldPrice, image }) => {
       </div>
       <div className="flex items-center justify-between p-3">
         <div className="flex items-baseline gap-2">
-          <Typography variant="h6">{`$${price}.00`}</Typography>
+          <Typography variant="h6">{`S/. ${price}.00`}</Typography>
           <Typography variant="subtitle2" className="line-through">
-            {`$${oldPrice}.00`}
+            {`S/. ${oldPrice}`}
           </Typography>
         </div>
-        <StyledButton size="small" className="rounded-full">
+        <StyledButton size="small" className="rounded-full" onClick={() => handleClick(product)}>
           <ShoppingCartOutlinedIcon />
         </StyledButton>
       </div>

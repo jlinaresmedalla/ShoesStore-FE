@@ -1,10 +1,17 @@
+import { useDispatch } from 'react-redux';
 import ProductCard from '@/components/ProductCard';
 import { StyledPaper, StyledTextField } from '@/components/ui';
+import { addCart } from '@/redux/user/cart.slice';
 import SearchIcon from '@mui/icons-material/Search';
 import { Typography } from '@mui/material';
 import { productsList } from './utils/store.utils';
 
 const StoreProductsSection = () => {
+  const dispatch = useDispatch();
+  const handleCardClick = (product) => {
+    dispatch(addCart(product));
+  };
+
   return (
     <StyledPaper component="main" className={'flex flex-col p-4 gap-4'}>
       <div className="flex justify-between">
@@ -19,7 +26,7 @@ const StoreProductsSection = () => {
         variant="outlined"
       >
         {productsList.map((product) => (
-          <ProductCard key={product?.id} {...product} />
+          <ProductCard key={product?.id} {...product} handleClick={handleCardClick} />
         ))}
       </StyledPaper>
     </StyledPaper>
