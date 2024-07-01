@@ -1,6 +1,9 @@
+import { useNavigate } from 'react-router-dom';
 import { StyledButton, StyledTextField } from '@/components/ui';
 
 const LoginView = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="flex w-full h-screen ">
       <div className="flex justify-center items-center flex-grow">
@@ -9,7 +12,13 @@ const LoginView = () => {
           <form action="" className="flex flex-col gap-4">
             <StyledTextField label="Email" size="medium" />
             <StyledTextField label="Password" size="medium" type="password" />
-            <StyledButton>Log In</StyledButton>
+            <StyledButton
+              onClick={() => {
+                navigate('/');
+              }}
+            >
+              Log In
+            </StyledButton>
           </form>
         </div>
       </div>
