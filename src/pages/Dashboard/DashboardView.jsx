@@ -7,7 +7,7 @@ const DashboardView = () => {
       <PageHeader title="Dashboard" />
       <StyledPaper className="flex flex-col p-4 gap-4">
         <Typography variant="subtitle1">Descuentos de temporada</Typography>
-        <img src="/dashboard_banner.png" alt="dashboard" className="w-full" />
+        queloque
       </StyledPaper>
     </section>
   );
